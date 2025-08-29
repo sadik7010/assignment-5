@@ -12,11 +12,36 @@ for(let i = 0; i<loveIcon.length;i++){
     })
 }
 
+// copy button function
+let copyButton = document.querySelectorAll(".copyButton");
+let copyCount = 0;
+let copyCounter = document.getElementById("copyCounter");
+
+for (let copy of copyButton) {
+  copy.addEventListener("click", function () {
+    let cardBody = copy.parentElement.parentElement;
+    let number = cardBody.querySelector(".number").innerText;
+    copyCount++;
+    copyCounter.innerText = copyCount;
+    navigator.clipboard.writeText(number);
+
+    alert("Number copied: " + number);
+  });
+}
+
+
+     
+  
+
 // Call Buttons Functionalities
 
 
 let cardInformation = document.querySelectorAll(".call-btn");
 let coinCount = document.getElementById("coin-count")
+let historyContainer = document.getElementById("historyContainer")
+historyContainer.innerText = ""
+let clearBtn = document.getElementById("clearHistory")
+
 
 
 for (let cardInfo of cardInformation) {
@@ -30,17 +55,46 @@ for (let cardInfo of cardInformation) {
     if (totalCoinNumber >= 20) {
       coinCount.innerText = totalCoinNumber - 20;
       alert(title + " " + serviceNumber);
-    } else {
-      alert("No Coin");
-    }
+      // current Time
+      
+      let timeStr = new Date().toLocaleTimeString();
+      // create history entry
+      let entry = document.createElement("div");
+      
+      entry.innerHTML = `
+         <div class="flex justify-between items-center border-2 border-blue-600 bg-[#fafafa] p-5 mx-[20px] rounded-[8px] mt-5">
+
+
+          <div>
+            <p class="text-[18px] font-semibold">${title}</p>
+            <p class="text-[18px]">${serviceNumber}</p>
+            </div>
+            <div>
+            <p class="text-[18px]">${timeStr}</p>
+          </div>
+         </div>
+      `;
 
     
+      // add history container
+      historyContainer.appendChild(entry);
+      
+    } 
+    else{
+      alert("You don't have enough coinsYou need at least 20 coins to make a call.")
+    }
     
 
     
   });
 
-  const data = {};
+  // clear history
+  clearBtn.addEventListener("click",function(){
+    historyContainer.innerHTML = " "
+  })
+
+
+  
 }
   
 
