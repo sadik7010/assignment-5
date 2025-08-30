@@ -59,7 +59,7 @@ for (let cardInfo of cardInformation) {
       let div = document.createElement("div");
       
       div.innerHTML = `
-         <div class="flex justify-between items-center border-2 border-blue-600 bg-[#fafafa] p-5 mx-[20px] rounded-[8px] mt-5">
+         <div class="flex justify-between items-center  bg-[#fafafa] p-5 mx-[20px] rounded-[8px] mt-5">
 
 
           <div>
