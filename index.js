@@ -2,15 +2,15 @@
 let loveCount = 0;
 const loveCountNumber = document.getElementById("love-count");
 const loveIcon = document.getElementsByClassName("love-icon")
-
-for(let i = 0; i<loveIcon.length;i++){
-    loveIcon[i].addEventListener("click",function(){
-        loveCount++;
  
-        console.log(loveCount)
-        loveCountNumber.innerText = loveCount
+  for(loveIconButton of loveIcon){
+    loveIconButton.addEventListener("click", function(){
+      loveCount++
+      loveCountNumber.innerText = loveCount
     })
-}
+  }
+
+
 
 // copy button function
 let copyButton = document.querySelectorAll(".copyButton");
@@ -55,13 +55,10 @@ for (let cardInfo of cardInformation) {
     if (totalCoinNumber >= 20) {
       coinCount.innerText = totalCoinNumber - 20;
       alert(title + " " + serviceNumber);
-      // current Time
+      let time = new Date().toLocaleTimeString();
+      let div = document.createElement("div");
       
-      let timeStr = new Date().toLocaleTimeString();
-      // create history entry
-      let entry = document.createElement("div");
-      
-      entry.innerHTML = `
+      div.innerHTML = `
          <div class="flex justify-between items-center border-2 border-blue-600 bg-[#fafafa] p-5 mx-[20px] rounded-[8px] mt-5">
 
 
@@ -70,14 +67,14 @@ for (let cardInfo of cardInformation) {
             <p class="text-[18px]">${serviceNumber}</p>
             </div>
             <div>
-            <p class="text-[18px]">${timeStr}</p>
+            <p class="text-[18px]">${time}</p>
           </div>
          </div>
       `;
 
     
-      // add history container
-      historyContainer.appendChild(entry);
+      // History container
+      historyContainer.appendChild(div);
       
     } 
     else{
@@ -88,7 +85,6 @@ for (let cardInfo of cardInformation) {
     
   });
 
-  // clear history
   clearBtn.addEventListener("click",function(){
     historyContainer.innerHTML = " "
   })

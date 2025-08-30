@@ -25,9 +25,9 @@
   <!-- Nevbar section  -->
   <body class="bg-[#f5fff6]">
     <div
-      class="border-2 border-green-500 w-[full] h-[100px] flex justify-between items-center bg-white"
+      class="w-full h-[auto] flex flex-col md:flex-row justify-between items-center bg-white p-4 "
     >
-      <div class="flex ml-12 gap-4">
+      <div class="flex items-center gap-4 mb-4 md:mb-0 ">
         <img class="w-[50px] h-[50px]" src="./assets/logo.png" alt="" />
         <p class="font-extrabold text-[#006747]">
           Emergency <br />
@@ -35,9 +35,9 @@
         </p>
       </div>
 
-      <div class="flex gap-[50px] mr-12 font-bold">
+      <div class="flex flex-col md:flex-row gap-4 md:gap-[50px] mr-12 font-bold">
         <div
-          class="flex gap-1 bg-[#41ff6b1a] p-[10px] rounded-[50px] w-[127px] h-[52px] items-center justify-center"
+          class="flex gap-1 bg-[#41ff6b1a] p-[10px] rounded-[50px]  w-[127px] h-[52px] items-center justify-center"
         >
           <p> <span id="love-count">0</span></p>
           <img class="w-[40px] h-[40px]" src="./assets/heart.png" alt="" />
@@ -51,9 +51,9 @@
         </div>
 
         <p
-          class="bg-[#00a63e] p-[20px] rounded-[50px] flex items-center justify-center w-[127px] h-[52px]"
+          class="bg-[#00a63e] p-[20px] rounded-[50px] flex items-center justify-center w-[127px] h-[52px] text-white "
         >
-          <span id="copyCounter"  class="mr-2">0</span>Copy
+          <span id="copyCounter"  class="mr-2 ">0</span>Copy
         </p>
       </div>
     </div>
@@ -61,17 +61,17 @@
     <!-- Banner section -->
 
     <div
-      class="border-2 border-red-600 w-[full] h-[239px] bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223]"
+      class=" w-full h-[auto] bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] md:p-2  "
     >
       <img
-        class="w-[92px] h-[92px] mx-auto mt-[25px]"
+        class="w-[92px] h-[92px] mx-auto mt-6"
         src="./assets/logo-dark.png"
         alt=""
       />
       <p class="text-center text-[40px] text-white font-semibold">
         Emergency Service Directory
       </p>
-      <p class="text-center text-white">
+      <p class="text-center text-white mb-6  ">
         Government Emergency Services at Your Fingertip – A Project by
         Government of the People’s Republic of Bangladesh
       </p>
@@ -81,9 +81,9 @@
 
     <!-- card-section -->
 
-    <div class="flex m-[30px] ">
-      <div class="border-2 border-blue-600  h-[1240px] w-[full]   grid grid-cols-3 gap-y-6 ">
-        <div class="card w-[436px] bg-base-100 card-xl shadow-sm mx-[20px]">
+    <div class="flex flex-col md:flex-row justify-center max-[]: md:w-full h-[auto] md:m-5  ">
+      <div class="   h-auto w-full grid place-items-center grid-cols-1 lg:grid-cols-3 gap-6 p-3 max-w-xs sm:max-w-full  mx-auto  ">
+        <div class="card w-full  bg-base-100 card-xl shadow-lg  ">
           <div class="card-body">
             <div>
               <div class="flex justify-between items-center">
@@ -105,7 +105,7 @@
             <p class="text-[#5c5c5c]">National Emergency</p>
             <p class="number service-number font-bold text-[30px]">999</p>
             <p class="bg-[#f2f2f2] flex items-center justify-center w-[127px] h-[52px] rounded-[20px] text-[black]  ">All</p>
-            <div class="flex gap-[10px]">
+            <div class="flex flex-col lg:flex-row gap-2 items-center ">
               <button class="copyButton copy-btn btn w-[183px] h-[40px] rounded-[10px] bg-white">
                 <i class="fa-solid fa-copy"></i>Copy
               </button>
@@ -115,7 +115,7 @@
             </div>
           </div>
         </div>
-        <div class="card  bg-base-100 card-xl shadow-sm mx-[20px] w-[436px]">
+        <div class="card w-full bg-base-100 card-xl shadow-lg  ">
           <div class="card-body">
             <div>
               <div class="flex justify-between items-center">
@@ -137,7 +137,7 @@
             <p class="text-[#5c5c5c]">Police</p>
             <p class="number service-number font-bold text-[30px]">999</p>
             <p class="bg-[#f2f2f2] flex items-center justify-center w-[127px] h-[52px] rounded-[20px] text-[black]  ">Police</p>
-            <div class="flex gap-[10px]">
+            <div class="flex flex-col lg:flex-row gap-2 items-center ">
               <button class="copyButton copy-btn btn w-[183px] h-[40px] rounded-[10px] bg-white">
                 <i class="fa-solid fa-copy"></i>Copy
               </button>
@@ -147,7 +147,7 @@
             </div>
           </div>
         </div>
-        <div class="card w-[436px] bg-base-100 card-xl shadow-sm mx-[20px]">
+        <div class="card w-full bg-base-100 card-xl shadow-lg ">
           <div class="card-body">
             <div>
               <div class="flex justify-between items-center">
@@ -169,7 +169,7 @@
             <p class="text-[#5c5c5c]">Fire Service</p>
             <p class="number service-number font-bold text-[30px]">999</p>
             <p class="bg-[#f2f2f2] flex items-center justify-center w-[127px] h-[52px] rounded-[20px] text-[black]  ">Fire</p>
-            <div class="flex gap-[10px]">
+            <div class="flex flex-col lg:flex-row gap-2 items-center ">
               <button class="copyButton copy-btn btn w-[183px] h-[40px] rounded-[10px] bg-white">
                 <i class="fa-solid fa-copy"></i>Copy
               </button>
@@ -179,7 +179,7 @@
             </div>
           </div>
         </div>
-        <div class="card w-[436px] bg-base-100 card-xl shadow-sm mx-[20px]">
+        <div class="card w-full bg-base-100 card-xl shadow-lg ">
           <div class="card-body">
             <div>
               <div class="flex justify-between items-center">
@@ -201,7 +201,7 @@
             <p class="text-[#5c5c5c]">Ambulance</p>
             <p class="number service-number font-bold text-[30px] ">1994-999999</p>
             <p class="bg-[#f2f2f2] flex items-center justify-center w-[127px] h-[52px] rounded-[20px] text-[black]  ">Health</p>
-            <div class="flex gap-[10px]">
+            <div class="flex flex-col lg:flex-row gap-2 items-center ">
               <button class="copyButton copy-btn btn w-[183px] h-[40px] rounded-[10px] bg-white">
                 <i class="fa-solid fa-copy"></i>Copy
               </button>
@@ -211,7 +211,7 @@
             </div>
           </div>
         </div>
-        <div class="card w-[436px] bg-base-100 card-xl shadow-sm mx-[20px]">
+        <div class="card w-full bg-base-100 card-xl shadow-lg ">
           <div class="card-body">
             <div>
               <div class="flex justify-between items-center">
@@ -233,7 +233,7 @@
             <p class="text-[#5c5c5c]">Women & Child Helpline</p>
             <p class="number service-number font-bold text-[30px]">109</p>
             <p class="bg-[#f2f2f2] flex items-center justify-center w-[127px] h-[52px] rounded-[20px] text-[black]  ">Help</p>
-            <div class="flex gap-[10px]">
+            <div class="flex flex-col lg:flex-row gap-2 items-center ">
               <button class="copyButton copy-btn btn w-[183px] h-[40px] rounded-[10px] bg-white">
                 <i class="fa-solid fa-copy"></i>Copy
               </button>
@@ -243,7 +243,7 @@
             </div>
           </div>
         </div>
-        <div class="card w-[436px] bg-base-100 card-xl shadow-sm mx-[20px]">
+        <div class="card w-full bg-base-100 card-xl shadow-lg ">
           <div class="card-body">
             <div>
               <div class="flex justify-between items-center">
@@ -265,7 +265,7 @@
             <p class="text-[#5c5c5c]">Anti-Corruption</p>
             <p class="number service-number font-bold text-[30px]">106</p>
             <p class="bg-[#f2f2f2] flex items-center justify-center w-[127px] h-[52px] rounded-[20px] text-[black]  ">Govt.</p>
-            <div class="flex gap-[10px]">
+            <div class="flex flex-col lg:flex-row gap-2 items-center ">
               <button class="copyButton copy-btn btn w-[183px] h-[40px] rounded-[10px] bg-white">
                 <i class="fa-solid fa-copy"></i>Copy
               </button>
@@ -275,7 +275,7 @@
             </div>
           </div>
         </div>
-        <div class="card w-[436px] bg-base-100 card-xl shadow-sm mx-[20px]">
+        <div class="card w-full bg-base-100 card-xl shadow-lg ">
           <div class="card-body">
             <div>
               <div class="flex justify-between items-center">
@@ -297,7 +297,7 @@
             <p class="text-[#5c5c5c]">Electricity Outage</p>
             <p class="number service-number font-bold text-[30px]">16216</p>
             <p class="bg-[#f2f2f2] flex items-center justify-center w-[127px] h-[52px] rounded-[20px] text-[black]  ">Electricity</p>
-            <div class="flex gap-[10px]">
+            <div class="flex flex-col lg:flex-row gap-2 items-center ">
               <button class="copyButton copy-btn btn w-[183px] h-[40px] rounded-[10px] bg-white">
                 <i class="fa-solid fa-copy"></i>Copy
               </button>
@@ -307,7 +307,7 @@
             </div>
           </div>
         </div>
-        <div class="card w-[436px]  bg-base-100 card-xl shadow-sm mx-[20px]">
+        <div class="card w-full  bg-base-100 card-xl shadow-lg ">
           <div class="card-body">
             <div>
               <div class="flex justify-between items-center">
@@ -329,7 +329,7 @@
             <p class="text-[#5c5c5c]">Brac</p>
             <p class="number service-number font-bold text-[30px]">16445</p>
             <p class="bg-[#f2f2f2] flex items-center justify-center w-[127px] h-[52px] rounded-[20px] text-[black]  ">NGO</p>
-            <div class="flex gap-[10px]">
+            <div class="flex flex-col lg:flex-row gap-2 items-center ">
               <button class="copyButton copy-btn btn w-[183px] h-[40px] rounded-[10px] bg-white">
                 <i class="fa-solid fa-copy"></i>Copy
               </button>
@@ -339,7 +339,7 @@
             </div>
           </div>
         </div>
-        <div class="card w-[436px]   bg-base-100 card-xl shadow-sm mx-[20px] ">
+        <div class="card w-full   bg-base-100 card-xl shadow-lg  ">
           <div class="card-body">
             <div>
               <div class="flex justify-between items-center">
@@ -361,7 +361,7 @@
             <p class="text-[#5c5c5c]">Bangladesh Railway</p>
             <p class="number service-number font-bold text-[30px]">163</p>
             <p class="bg-[#f2f2f2] flex items-center justify-center w-[127px] h-[52px] rounded-[20px] text-[black]  ">Travel</p>
-            <div class="flex gap-[10px]">
+            <div class="flex flex-col lg:flex-row gap-2 items-center ">
               <button class="copyButton copy-btn btn w-[183px] h-[40px] rounded-[10px] bg-white">
                 <i class="fa-solid fa-copy"></i>Copy
               </button>
@@ -376,7 +376,7 @@
 
       <!-- History-section -->
 
-      <div id="History-section" class="border-3 border-lime-600 w-1/4 md:min-h-60 lg:min-h-80 bg-white">
+      <div id="History-section" class="  md:w-1/4 mx-auto w-full  bg-white">
         <div class="flex justify-between items-center m-[20px]">
           <p class="font-bold text-[20px]">
             <i class="fa-solid fa-clock"></i> Call History
